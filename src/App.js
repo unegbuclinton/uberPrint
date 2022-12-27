@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState } from 'react';
+import CanvasComponent from './components/CanvasComponent';
+import HamburgerMenu from './components/HamburgerMenu';
+import Nav from './components/Nav';
 function App() {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const showHamburger = () => {
+    setShowMenu(true);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="relative">
+      <Nav onClick={showHamburger} />
+      <CanvasComponent />
+      <div
+        className={`absolute top-0  w-full transition-all	duration-1500 ease-in ${
+          showMenu ? 'translate-x-0' : '-translate-x-full'
+        } `}
+      >
+        <HamburgerMenu onClose={() => setShowMenu(false)} />
+      </div>
     </div>
   );
 }
