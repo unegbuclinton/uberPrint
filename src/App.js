@@ -11,7 +11,7 @@ function App() {
     setShowMenu(true);
   };
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
       <Nav onClick={showHamburger} />
       <CanvasComponent product={() => setProduct(true)} />
       <div
