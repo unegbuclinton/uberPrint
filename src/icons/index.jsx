@@ -5,6 +5,7 @@ export { ReactComponent as DPIconClose } from '../icons/svgs/Close.svg';
 export { ReactComponent as DPIconCurrency } from '../icons/svgs/currency.svg';
 export { ReactComponent as DPIconDownload } from '../icons/svgs/download.svg';
 export { ReactComponent as DPiconLogo } from '../icons/svgs/logo.svg';
+export { ReactComponent as DPIconOutlineClose } from '../icons/svgs/outline-close.svg';
 export { ReactComponent as DPIconPhone } from '../icons/svgs/phone.svg';
 export { ReactComponent as DPIconRedo } from '../icons/svgs/redo.svg';
 export { ReactComponent as DPIconRigntNav } from '../icons/svgs/rightNav.svg';

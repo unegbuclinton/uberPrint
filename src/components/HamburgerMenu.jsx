@@ -15,13 +15,16 @@ const HamburgerMenu = ({ onClose }) => {
     { title: 'Contact' },
   ];
   return (
-    <div className=" bg-white font-semibold h-screen overflow-scroll	">
+    <div className=" bg-white font-semibold h-[90vh] overflow-scroll">
       <div className="flex w-full justify-end py-4 px-5 " onClick={onClose}>
         <DPIconClose />
       </div>
 
-      {menuList.map(({ title, icon }) => (
-        <div className=" flex justify-between border-t border-light-grey py-4 px-5">
+      {menuList.map(({ title, icon }, index) => (
+        <div
+          key={index}
+          className=" flex justify-between border-t border-light-grey py-4 px-5"
+        >
           <p>{title}</p>
           {icon}
         </div>
