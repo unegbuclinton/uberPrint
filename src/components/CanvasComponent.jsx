@@ -3,7 +3,7 @@ import Controls from './Controls';
 import ProductOptions from './ProductOptions';
 import UndoControls from './UndoControls';
 
-const CanvasComponent = () => {
+const CanvasComponent = ({ product }) => {
   const canvaRef = useRef(null);
 
   useEffect(() => {
@@ -20,17 +20,19 @@ const CanvasComponent = () => {
       context.fill();
     };
   }, []);
+
   return (
-    <div className="relative h-screen overflow-hidden">
+    <div className="relative  overflow-hidden">
       <UndoControls />
       <canvas
         ref={canvaRef}
         width={375}
-        height={435}
-        className="bg-carolina-blue"
+        height={470}
+        className="bg-sheen-green"
       />
+
       <Controls />
-      <ProductOptions />
+      <ProductOptions product={product} />
     </div>
   );
 };
