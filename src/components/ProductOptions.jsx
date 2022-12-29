@@ -7,11 +7,11 @@ import {
   DPIconText,
 } from '../icons';
 
-const ProductOptions = ({ product }) => {
+const ProductOptions = ({ product, addImage, addText }) => {
   const options = [
     { title: 'Product', icon: <DPIconShirt />, onFunc: () => product() },
-    { title: 'Add Images', icon: <DPIconCamera /> },
-    { title: 'Add Text', icon: <DPIconText /> },
+    { title: 'Add Images', icon: <DPIconCamera />, onFunc: () => addImage() },
+    { title: 'Add Text', icon: <DPIconText />, onFunc: () => addText() },
     { title: 'Save/Load', icon: <DPIconDownload /> },
   ];
   return (

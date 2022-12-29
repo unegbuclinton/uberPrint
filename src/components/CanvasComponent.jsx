@@ -3,7 +3,7 @@ import Controls from './Controls';
 import ProductOptions from './ProductOptions';
 import UndoControls from './UndoControls';
 
-const CanvasComponent = ({ product }) => {
+const CanvasComponent = ({ product, addImage, addText }) => {
   const canvaRef = useRef(null);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const CanvasComponent = ({ product }) => {
       />
 
       <Controls />
-      <ProductOptions product={product} />
+      <ProductOptions product={product} addImage={addImage} addText={addText} />
     </div>
   );
 };
